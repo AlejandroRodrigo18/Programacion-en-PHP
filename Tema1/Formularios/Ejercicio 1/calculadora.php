@@ -1,4 +1,11 @@
 <?php
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
 if (isset($_POST['btncalcular'])) {
 
 $numero1 = $_POST['num1'];
@@ -33,4 +40,5 @@ switch ($operacion){
 } 
             
 }            
+
 ?>
