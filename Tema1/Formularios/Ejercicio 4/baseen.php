@@ -11,8 +11,8 @@ if (isset($_POST['btncalcular'])) {
 $numero = test_input($_POST["number"]);
 $nueva_base = test_input($_POST["base"]);
 $base_antigua= "";
-//Separamos numero de la base antigua
 
+//Separamos numero de la base antigua
 $partes = explode("/",$numero);
 
 if(count($partes) == 2) {
@@ -23,7 +23,7 @@ if(count($partes) == 2) {
 if ($base_antigua < 2 || $base_antigua > 36 || $nueva_base < 2 || $nueva_base > 36){
 
     //Verificamos que la base esté entre 2 y 36
-    echo "La base debe de esatr comprendida entre 2 y 36";
+    echo "La base debe de estar comprendida entre 2 y 36";
 
 } else {
 
@@ -37,6 +37,7 @@ if ($base_antigua < 2 || $base_antigua > 36 || $nueva_base < 2 || $nueva_base > 
 }
 
 }//fin isset
+
 
 
 ?>
