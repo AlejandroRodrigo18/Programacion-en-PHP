@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Alumno</title>
+</head>
+<body>
+    
+     <div style="text-align: center;">
+    <form method="POST" action="datos.php">
+
+        <h2>Datos Alumnos</h2>
+
+        <label for="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre:</label> 
+        <input type="text" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*"  name="name" placeholder="Introduce un número" required>
+        <label>*Obligatrio</label>
+
+        <br><br>    
+
+        <label for="subname1">&nbsp;Primer Apellido:</label>
+        <input type="text" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*"  name="subname1" placeholder="Introduce un número" required>
+        <br><br>    
+
+        <label for="subname2">&nbsp;&nbsp;&nbsp;&nbsp;Segundo Apellido:</label>
+        <input type="text" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]*"  name="subname2" placeholder="Introduce un número" required>
+        
+        <br><br> 
+
+        <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;Email:</label>
+        <input type="email" class="email" name="mail" required>
+        <label>*Obligatrio</label>
+        <br><br>
+        
+        <label class="option">Genero:</label>
+        <input type="radio" name="genero" value="H" checked>Hombre
+        <input type="radio" name="genero" value="M">Mujer
+        <label>*Obligatrio</label>
+
+        <br><br>
+
+        <input type="submit" name="btncalcular" value="Enviar">        
+        <input type="reset" value="Borrar">
+    </form>
+
+    </div>
+</body>
+</html>

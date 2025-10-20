@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Base</title>
+</head>
+<body>
+    <div style="text-align: center;">
+    <form method="POST" action="ip.php">
+
+        <h2>IPs</h2>
+
+        <label for="ip">IP notacion decimal:</label>
+        <input type="text"  pattern="\d+(\.\d+){3}"   name="number" placeholder="Introduce un número" required>
+        <br><br>    
+
+        <input type="submit" name="btncalcular" value="Notacion Binaria">        
+        <input type="reset" value="Borrar">
+    </form>
+
+    </div>
+</body>
+</html>
