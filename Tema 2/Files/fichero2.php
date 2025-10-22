@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2 - Fichero </title>
+    <title>Ejercicio 1 - Fichero </title>
 </head>
 <body>
     
@@ -47,6 +47,7 @@ function test_input($data) {
   return $data;
 }
 
+function guardarFichero(){
 if (isset($_POST['btn'])) {
 
     $nombre = test_input($_POST['nombre']);
@@ -63,23 +64,23 @@ if (isset($_POST['btn'])) {
         $nombreFichero = "C:/wamp64/www/clase/PHP/Files/alumnos2.txt";
 
         //Separacion de las variables en la columna indicada
-        $linea  = str_pad($nombre, 10, "#", STR_PAD_RIGHT);
-        $linea .= str_pad($subname1, 12, "#", STR_PAD_RIGHT);
-        $linea .= str_pad($subname2, 12, "#", STR_PAD_RIGHT);
-        $linea .= str_pad($fNacimiento, 12, "#", STR_PAD_RIGHT);
-        $linea .= str_pad($localidad, 15, "#", STR_PAD_RIGHT);
+        $linea  = str_pad($nombre, strlen($nombre)+2, "#", STR_PAD_RIGHT);
+        $linea .= str_pad($subname1, strlen($subname1)+2, "#", STR_PAD_RIGHT);
+        $linea .= str_pad($subname2, strlen($subname2)+2, "#", STR_PAD_RIGHT);
+        $linea .= str_pad($fNacimiento, strlen($fNacimiento)+2, "#", STR_PAD_RIGHT);
+        $linea .= str_pad($localidad,  strlen($localidad)+2, "#", STR_PAD_RIGHT);
         $linea .= "\n";
 
 
         $fichero = fopen($nombreFichero, "a") or die ("Fichero Inaccesible");
         fwrite($fichero, $linea);
         fclose($fichero);
-        echo "Registro guardado correctamente en: $nombreFichero";
+        echo "Registro guardado correctamente";
 
+    }
 }
 
-
+guardarFichero();
 
 ?>
-
 </html>
