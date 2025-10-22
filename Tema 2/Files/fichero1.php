@@ -61,7 +61,7 @@ if (isset($_POST['btn'])) {
         //$linea ="";
 
         //Ruta donde se va a guardar el fichero
-        $nombreFichero = "alumnos1.txt";
+        $nombreFichero = "Files/alumnos1.txt";
 
         //Separacion de las variables en la columna indicada
         $linea = str_pad($nombre,40);
