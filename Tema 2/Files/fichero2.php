@@ -58,10 +58,9 @@ if (isset($_POST['btn'])) {
 
 
     
-        //$linea ="";
 
         //Ruta donde se va a guardar el fichero
-        $nombreFichero = "C:/wamp64/www/clase/PHP/Files/alumnos2.txt";
+        $nombreFichero = "Files/alumnos2.txt";
 
         //Separacion de las variables en la columna indicada
         $linea  = str_pad($nombre, strlen($nombre)+2, "#", STR_PAD_RIGHT);
@@ -75,7 +74,7 @@ if (isset($_POST['btn'])) {
         $fichero = fopen($nombreFichero, "a") or die ("Fichero Inaccesible");
         fwrite($fichero, $linea);
         fclose($fichero);
-        echo "Registro guardado correctamente";
+        echo "Registro guardado correctamente en: $nombreFichero";
 
     }
 }
