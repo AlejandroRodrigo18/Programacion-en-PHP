@@ -32,8 +32,7 @@ function test_input($data) {
     return $data;
     }
 
-/*1. Creamos conexion con la Base de Datos*/
-//Usando PDO
+
 
 $servername = "localhost";
 $username = "root";
@@ -54,8 +53,7 @@ try {
 //2.- Recibimos datos del formulario
 
 function generarID_Categoria($con){
-//if (isset($_POST["enviar"])){
-    //$nombreCategoria = $_POST["nombre"];
+
 
 $sql = "SELECT id_categoria FROM categoria ORDER BY id_categoria DESC LIMIT 1";
 
@@ -100,9 +98,8 @@ if (isset($_POST["enviar"])) {
     }
 }
 
-
-
 ?>
+
 
 
 
