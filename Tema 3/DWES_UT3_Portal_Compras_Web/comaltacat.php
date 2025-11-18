@@ -33,14 +33,6 @@ function test_input($data) {
     }
 
 /*1. Creamos conexion con la Base de Datos*/
-
-/*
-define('DB_SERVER','localhost');
-define('DB_USERNAME','root');
-define('DB_PASSWORD','rootroot');
-define('DB_DATABASE', 'comprasweb');
-*/
-
 //Usando PDO
 
 $servername = "localhost";
@@ -111,6 +103,7 @@ if (isset($_POST["enviar"])) {
 
 
 ?>
+
 
 
 
